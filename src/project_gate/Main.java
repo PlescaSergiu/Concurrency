@@ -1,15 +1,13 @@
 package project_gate;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.Random;
 
 public class Main {
-    public static void main(String... args) {
+    public static void main(String... args) throws Exception {
 
-        for (int i = 1; i < 101; i++) {
-
-
-        }
+        Counter counter = new Counter();
+        counter.counter();
 
 
     }

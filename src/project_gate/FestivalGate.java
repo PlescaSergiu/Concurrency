@@ -2,25 +2,29 @@ package project_gate;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
-public class FestivalGate {
+import static java.util.Collections.frequency;
+import static project_gate.TicketsEnum.*;
 
-    private List<TicketsEnum> gate = new ArrayList<>();
+public class FestivalGate extends Thread {
+
+    private List<TicketsEnum> enumList = new ArrayList<>();
 
 
     public void addTicket(TicketsEnum tickets) {
-        gate.add(tickets);
+        enumList.add(tickets);
 
     }
 
-    public void getGateDetailes(List gate){
-        System.out.println("Au intrat" + gate.size());
-        System.out.println();
+    public void getGateDetailes() {
+        System.out.println("Au intrat" + enumList.size());
+        System.out.println("Full - " + frequency(enumList, Full) + " Full_Vip - " +
+                frequency(enumList, Full_Vip) + " Full_Vip - " + frequency(enumList, One_Day) +
+                " Full_Vip - " + frequency(enumList, One_Day_Vip) + " Free_Pass - " + frequency(enumList, Free_Pass));
+
+
     }
-
-
 
 
 }
