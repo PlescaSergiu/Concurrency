@@ -15,7 +15,7 @@ public class Festival extends Thread {
 
     @Override
     public void run() {
-        do {
+        while (random != 0 ) {
             gate.getGateDetailes();
             try {
                 Thread.sleep(5000);
@@ -23,7 +23,7 @@ public class Festival extends Thread {
                 e.printStackTrace();
             }
 
-        }while (random != 0 );
+        }
 
     }
 }

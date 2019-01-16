@@ -2,9 +2,7 @@ package project_gate;
 
 import java.util.Random;
 
-
 public class Counter  {
-
 
     public void counter() throws  Exception{
         FestivalGate gate = new FestivalGate();
